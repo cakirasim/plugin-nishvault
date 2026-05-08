@@ -1,0 +1,39 @@
+{
+  "name": "plugin-nishvault",
+  "version": "0.1.1",
+  "description": "ElizaOS action step before sendTransaction: Nishvault Base mainnet x402 pre-send guard for EVM agents.",
+  "type": "module",
+  "license": "MIT",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "src/"
+  ],
+  "keywords": [
+    "elizaos",
+    "plugin",
+    "x402",
+    "evm",
+    "agent",
+    "pre-send-guard",
+    "base-mainnet",
+    "real-usdc",
+    "sendtransaction",
+    "transaction-safety",
+    "nishvault",
+    "pre-send-proof-receipt",
+    "wallet-sendtransaction",
+    "agent-transaction-safety",
+    "elizaos-action"
+  ],
+  "peerDependencies": {
+    "@elizaos/core": ">=1.0.0"
+  },
+  "dependencies": {
+    "nishvault-preflight-buy": "^0.1.4"
+  }
+}
