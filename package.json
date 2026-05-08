@@ -1,17 +1,21 @@
 {
   "name": "plugin-nishvault",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "ElizaOS action step before sendTransaction: Nishvault Base mainnet x402 pre-send guard for EVM agents.",
   "type": "module",
   "license": "MIT",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "exports": {
-    ".": "./src/index.js"
+    ".": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "node -e \"const fs=require('fs'); fs.mkdirSync('dist',{recursive:true}); fs.copyFileSync('src/index.js','dist/index.js');\""
   },
   "files": [
     "LICENSE",
     "README.md",
-    "src/"
+    "dist/",
+    "images/"
   ],
   "keywords": [
     "elizaos",
