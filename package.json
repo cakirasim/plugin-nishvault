@@ -1,9 +1,14 @@
 {
   "name": "plugin-nishvault",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "ElizaOS action step before sendTransaction: Nishvault Base mainnet x402 pre-send guard for EVM agents.",
   "type": "module",
   "license": "MIT",
+  "repository": "github:cakirasim/plugin-nishvault",
+  "bugs": {
+    "url": "https://github.com/cakirasim/plugin-nishvault/issues"
+  },
+  "homepage": "https://api.nishvault.com/elizaos-action",
   "main": "dist/index.js",
   "exports": {
     ".": "./dist/index.js"
@@ -39,5 +44,13 @@
   },
   "dependencies": {
     "nishvault-preflight-buy": "^0.1.4"
+  },
+  "agentConfig": {
+    "actions": [
+      "NISHVAULT_PRE_SEND_GUARD"
+    ],
+    "providers": [],
+    "evaluators": [],
+    "services": []
   }
 }

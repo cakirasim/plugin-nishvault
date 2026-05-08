@@ -82,8 +82,11 @@ The receipt is the launch gate: transaction payload built, Nishvault guard paid 
 
 ## Registry Note
 
-This package is a mainnet-ready adapter for programmatic EVM agent builders. Before ElizaOS registry submission, add required registry images and run:
+This package is a mainnet-ready adapter for programmatic EVM agent builders. It includes the registry assets, `dist/` build output, repository metadata, and `agentConfig` entry expected by the ElizaOS publish validator.
+
+Before ElizaOS registry submission, validate with:
 
 ```bash
-elizaos publish --test
+bunx @elizaos/cli@1.7.2 publish --test
+bunx @elizaos/cli@1.7.2 publish --dry-run
 ```
