@@ -89,6 +89,15 @@ PRE_SEND_PROOF_RECEIPT
 
 The receipt is the launch gate: transaction payload built, Nishvault guard paid and passed, then the wallet broadcast step may continue.
 
+## Discover
+
+- x402scan: https://www.x402scan.com/server/a52fae0b-50ea-4a84-b326-16d4f08f8240
+- OpenAPI: https://x402-discovery.nishvault.com/openapi.json
+
+The discovery surface exposes one paid POST resource with a probe-safe request
+schema. It never broadcasts a transaction and does not ask agents for private
+keys.
+
 ## Registry Note
 
 This package is a mainnet-ready adapter for programmatic EVM agent builders. It includes the registry assets, `dist/` build output, repository metadata, and `agentConfig` entry expected by the ElizaOS publish validator.
