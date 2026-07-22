@@ -17,6 +17,10 @@ function getSellerUrl(runtime) {
   return getSetting(runtime, "X402_SELLER_BASE_URL") || "https://api.nishvault.com";
 }
 
+function getArtifactRoot(runtime) {
+  return getSetting(runtime, "X402_ARTIFACT_ROOT") || ".nishvault-artifacts";
+}
+
 function extractText(message) {
   const content = message?.content;
   if (typeof content === "string") {
@@ -80,7 +84,7 @@ export const nishvaultPreSendGuardAction = {
       const preflight = await preflightTransactionRequest({
         buyerKey: getSetting(runtime, "X402_BUYER_PRIVATE_KEY"),
         sellerUrl: getSellerUrl(runtime),
-        artifactRoot: getSetting(runtime, "X402_ARTIFACT_ROOT"),
+        artifactRoot: getArtifactRoot(runtime),
         transaction,
       });
       const summary = summarizePreflightOutcome(preflight);

@@ -14,7 +14,8 @@
     ".": "./dist/index.js"
   },
   "scripts": {
-    "build": "node -e \"const fs=require('fs'); fs.mkdirSync('dist',{recursive:true}); fs.copyFileSync('src/index.js','dist/index.js');\""
+    "build": "node -e \"const fs=require('fs'); fs.mkdirSync('dist',{recursive:true}); fs.copyFileSync('src/index.js','dist/index.js');\"",
+    "test": "node --test"
   },
   "files": [
     "LICENSE",

@@ -35,11 +35,15 @@ X402_BUYER_PRIVATE_KEY=0xYOUR_BASE_MAINNET_BUYER_KEY
 X402_SELLER_BASE_URL=https://api.nishvault.com
 ```
 
-Optional:
+Artifact receipts default to the portable, working-directory-relative
+`.nishvault-artifacts` directory. Override it when needed:
 
 ```bash
 X402_ARTIFACT_ROOT=.nishvault-artifacts
 ```
+
+The plugin always passes this portable default to the buyer library, so an
+agent never inherits a package-build machine's absolute artifact path.
 
 ## Register
 
