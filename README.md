@@ -12,9 +12,14 @@ agent chooses action -> transaction payload built -> Nishvault guard -> wallet s
 
 ## Install
 
+Install the current portable build directly from the public repository:
+
 ```bash
-npm install plugin-nishvault
+elizaos plugins add github:cakirasim/plugin-nishvault
 ```
+
+The npm `0.1.3` package predates the portable artifact-root fix. Use the GitHub
+install above until a newer npm version is published.
 
 ## Workflow Slot
 
